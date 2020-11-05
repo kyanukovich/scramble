@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Welcome to Scramble!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id=app>
+    <header class="header">
+      <h1 class="header-title">Welcome to Scramble!</h1>
+    </header>
+    <div class="message">{{message}}</div>
+    <br>
+    <div class="data">
+      <div class="points">
+        <div>Points:</div>
+        <div class="digits">{{points}}</div>
+      </div>
+      <div class="passes">
+        <div>Passes:</div>
+        <div class="digits">{{passes}}</div>
+      </div>
+      <div class="strikes">
+        <div>Strikes:</div>
+        <div class="digits">{{strikes}}</div>
+      </div>
+    </div>
+    <br>
+    <div class="scrambled">>> {{scrambled}} <<</div> <br>
+        <div id="start" class="start">
+          <button id="toggleGame" @click="start">Start</button>
+        </div>
+        <div id="controls" class="controls">
+          <input type="text" id="input" value="" @keyup="upperCase">
+          <button id="guess" @click="guess">Guess</button>
+          <button id="pass" @click="pass">Pass</button>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="scramble.js"></script>
+</body>
+
+</html>
